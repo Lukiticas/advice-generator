@@ -7,11 +7,23 @@
 */
 
 main {
-  width: 100vw;
-  min-height: 100vh;
-
-  background-color: var(--darkblue);
-
+  max-width: 100vw;
+  min-height: calc(100vh - 3rem);
   display: grid;
   place-items: center;
+}
+
+footer {
+  color: var(--lightcyan);
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+}
+
+footer a {
+  color: var(--neongreen);
+  text-decoration: none;
 }

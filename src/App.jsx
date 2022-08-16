@@ -41,6 +41,21 @@ function App() {
           isLocked={isLocked}
         />
       </main>
+      <footer class="attribution">
+        Challenge by
+        <a
+          rel="noopener"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+        >
+          Frontend Mentor
+        </a>
+        . Coded by
+        <a rel="noopener" href="https://github.com/Lukiticas" target="_blank">
+          Lucas Matheus
+        </a>
+        .
+      </footer>
     </div>
   );
 }

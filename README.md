@@ -16,9 +16,9 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
+
+This was a fun project, remembering some react fundamentals!
 
 ### The challenge
 
@@ -45,10 +45,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - [React](https://reactjs.org/)
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Got confortable with css and styled-components
+How to do "timeout" classes, it was fun!

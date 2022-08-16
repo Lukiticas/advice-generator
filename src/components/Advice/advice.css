@@ -79,6 +79,12 @@
   }
 }
 
+@media screen and (max-width: 290px) {
+  .card img[alt="divider"] {
+    max-width: 100%;
+  }
+}
+
 @keyframes rotate {
   0% {
     -webkit-transform: rotate3d(0, 0, 1, 0deg);
