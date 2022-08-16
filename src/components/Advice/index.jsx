@@ -1,9 +1,9 @@
 import "./advice.css";
 
 export default function Advice({ id, message, changeAdvice, isLocked }) {
-  const diceSrc = "\\src\\assets\\icon-dice.svg";
-  const pttrnWeb = "src\\assets\\pattern-divider-desktop.svg";
-  const pttrnMobile = "src\\assets\\pattern-divider-mobile.svg";
+  const diceSrc = "../../../public/images/icon-dice.svg";
+  const pttrnWeb = "../../../public/images/pattern-divider-desktop.svg";
+  const pttrnMobile = "../../../public/images/pattern-divider-mobile.svg";
 
   return (
     <section className="card">
