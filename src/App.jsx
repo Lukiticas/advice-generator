@@ -9,14 +9,22 @@ function App() {
   });
   const [isLocked, setIsLocked] = useState(false);
 
-  const requestAdvice = async () => {
-    const data = await fetch("https://api.adviceslip.com/advice");
-    const json = await data.json();
-    const {
-      slip: { id, advice },
-    } = json;
-
-    setMessage({ id, advice });
+  const requestAdvice = () => {
+    fetch("https://api.adviceslip.com/advice", { cache: "no-cache" })
+      .then((data) => data.json())
+      .then((json) => {
+        const {
+          slip: { id, advice },
+        } = json;
+        setMessage({ id, advice });
+      })
+      .catch((err) => {
+        console.error(err);
+        setMessage({
+          id: "error",
+          advice: "this isn't a advice, some error occurred",
+        });
+      });
   };
 
   const changeAdvice = () => {
@@ -41,7 +49,7 @@ function App() {
           isLocked={isLocked}
         />
       </main>
-      <footer class="attribution">
+      <footer className="attribution">
         Challenge by
         <a
           rel="noopener"
