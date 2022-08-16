@@ -1,0 +1,129 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  align-items: center;
+  max-width: 500px;
+  padding: 2rem 1.5rem;
+  background-color: var(--darkgrayishblue);
+  border-radius: 1rem;
+}
+
+.card img[alt="divider"] {
+  margin-bottom: 1.5rem;
+}
+
+.card__number {
+  color: var(--neongreen);
+  text-transform: uppercase;
+  letter-spacing: 0.5ch;
+}
+
+.card__number > span::before {
+  content: "#";
+  color: inherit;
+}
+
+.card__title {
+  color: var(--lightcyan);
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.card__title:before {
+  content: "\201C";
+}
+
+.card__title:after {
+  content: "\201D";
+}
+
+.card__dice {
+  cursor: pointer;
+  position: absolute;
+  bottom: -1.9rem;
+  border: none;
+  outline: none;
+  background-color: var(--neongreen);
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  border-radius: 50vw;
+  transition: box-shadow 300ms ease-out;
+}
+
+.card__dice:hover {
+  -webkit-box-shadow: 0px -2px 37px 3px var(--neongreen);
+  box-shadow: 0px -2px 37px 3px var(--neongreen);
+}
+
+.locked {
+  cursor: not-allowed;
+  background-color: var(--neonred);
+  animation: pulsar 500ms infinite;
+  animation-direction: alternate-reverse;
+}
+
+.locked img {
+  animation: rotate 2s infinite;
+}
+
+.locked:hover {
+  --neongreen: var(--neonred);
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    max-width: 350px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  75% {
+    -webkit-transform: rotate3d(0, 0, 1, 270deg);
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+@keyframes pulsar {
+  0% {
+    -webkit-box-shadow: 0px -2px 0px 3px var(--neonred);
+    box-shadow: 0px -2px 0px 3px var(--neonred);
+  }
+
+  25% {
+    -webkit-box-shadow: 0px -2px 8px 3px var(--neonred);
+    box-shadow: 0px -2px 8px 3px var(--neonred);
+  }
+
+  50% {
+    -webkit-box-shadow: 0px -2px 16px 3px var(--neonred);
+    box-shadow: 0px -2px 16px 3px var(--neonred);
+  }
+
+  75% {
+    -webkit-box-shadow: 0px -2px 27px 3px var(--neonred);
+    box-shadow: 0px -2px 27px 3px var(--neonred);
+  }
+  100% {
+    -webkit-box-shadow: 0px -2px 37px 3px var(--neonred);
+    box-shadow: 0px -2px 37px 3px var(--neonred);
+  }
+}

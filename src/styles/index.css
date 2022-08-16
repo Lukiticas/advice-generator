@@ -16,4 +16,5 @@ body {
   --grayishblue: hsl(217, 19%, 38%);
   --darkgrayishblue: hsl(217, 19%, 24%);
   --darkblue: hsl(218, 23%, 16%);
+  --neonred: hsl(11, 100%, 60%);
 }
